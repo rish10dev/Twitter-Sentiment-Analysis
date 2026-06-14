@@ -1,25 +1,29 @@
 # Twitter Sentiment Analysis
 
-## Accuracy Achieved
-- Accuracy: 74.53%
-- Precision: 75%
-- Recall: 75%
-- F1-Score: 75%
-
-The model classifies tweets into positive and negative sentiment categories.
-
-## Technologies Used
-- Python
-- Scikit-learn
-- TF-IDF Vectorization
-- Logistic Regression
-- Pandas
-- Matplotlib
-
 ## Dataset
-The dataset used for training is larger than GitHub's upload limit and is therefore not included in this repository.
 
-Dataset Source:
+This project uses the Sentiment140 dataset.
+
+The dataset is not included in this repository because it exceeds GitHub's file size limit (100 MB).
+
+Download the dataset from:
+
 https://www.kaggle.com/datasets/kazanova/sentiment140
 
-## Project Structure
+After downloading, create the following folder structure:
+
+Twitter-Sentiment-Analysis/
+├── data/
+│   └── training.1600000.processed.noemoticon.csv
+
+Then run:
+
+python src/sentiment_analysis.py
+
+## Results
+
+* Accuracy: 74.53%
+* Algorithm: Logistic Regression
+* Feature Extraction: TF-IDF Vectorization
+
+The trained model and vectorizer are automatically saved in the models folder after execution.
