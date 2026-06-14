@@ -9,7 +9,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
+if not os.path.exists(dataset_path):
+    print("Dataset not found.")
+    print("Download Sentiment140 from Kaggle and place it inside the data folder.")
+    exit()
 # Load Dataset
 df = pd.read_csv(
     "data/training.1600000.processed.noemoticon.csv",
